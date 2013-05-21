@@ -1,0 +1,16 @@
+*.cs text eol=crlf diff=csharp
+*.csproj text eol=crlf merge=union
+*.sln text eol=crlf merge=union
+*.config text eol=crlf
+*.resx text eol=crlf merge=union
+* text=auto eol=crlf
+*.sh text=auto eol=lf
+*.exe binary
+*.dll binary
+*.png binary
+*.jpg binary
+*.nupkg binary
+*.pdb binary
+*.vsix binary
+*.xap binary
+
