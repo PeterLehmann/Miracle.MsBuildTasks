@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miracle.MsBuildTasks", "Miracle.MsBuildTasks\Miracle.MsBuildTasks.csproj", "{B13213F2-5C1B-42BC-B6C9-EC759C309EAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B13213F2-5C1B-42BC-B6C9-EC759C309EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13213F2-5C1B-42BC-B6C9-EC759C309EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13213F2-5C1B-42BC-B6C9-EC759C309EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13213F2-5C1B-42BC-B6C9-EC759C309EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

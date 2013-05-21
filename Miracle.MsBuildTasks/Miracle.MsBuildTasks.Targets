@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <MiracleTasksPath Condition="'$(MiracleTasksPath)' == ''">$(MSBuildProjectDirectory)\Miracle.MsBuildTasks</MiracleTasksPath>
+        <MiracleTasksLib>$(MiracleTasksPath)\Miracle.MsBuildTasks.dll</MiracleTasksLib>
+    </PropertyGroup>
+    <UsingTask TaskName="Miracle.MsBuildTasks.ChangeVersion" AssemblyFile="$(MiracleTasksLib)" />
+</Project>
