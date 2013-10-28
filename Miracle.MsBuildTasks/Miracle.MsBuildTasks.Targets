@@ -5,4 +5,5 @@
         <MiracleTasksLib>$(MiracleTasksPath)\Miracle.MsBuildTasks.dll</MiracleTasksLib>
     </PropertyGroup>
     <UsingTask TaskName="Miracle.MsBuildTasks.ChangeVersion" AssemblyFile="$(MiracleTasksLib)" />
+    <UsingTask TaskName="Miracle.MsBuildTasks.ChangeVersionFromGitBranch" AssemblyFile="$(MiracleTasksLib)" />
 </Project>
