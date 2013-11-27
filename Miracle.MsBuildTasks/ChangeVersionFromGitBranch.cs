@@ -14,7 +14,6 @@ namespace Miracle.MsBuildTasks
         [Required]
         public string ProjectFolder { get; set; }
 
-        [Required]
         public ITaskItem[] Files { get; set; }
 
         [Output]
@@ -23,6 +22,8 @@ namespace Miracle.MsBuildTasks
         public string FileVersion { get; set; }
         [Output]
         public string InfoVersion { get; set; }
+        [Output]
+        public string NugetVersion { get; set; }
 
         public override bool Execute()
         {
@@ -48,11 +49,16 @@ namespace Miracle.MsBuildTasks
             Version = string.Format("{0}.{1}.{2}", semanticVersion.Major, semanticVersion.Minor, semanticVersion.Patch);
             FileVersion = string.Format("{0}.{1}.{2}", semanticVersion.Major, semanticVersion.Minor, semanticVersion.Patch);
             InfoVersion = versionAndBranch.ToLongString();
+            NugetVersion = NugetVersionBuilder.GenerateNugetVersion(versionAndBranch);
+            
             this.LogInfo(String.Format("Version number is {0} and InfoVersion is {1}", Version, InfoVersion));
+            if (Files == null) { return true;}
             var task = new UpdateAssemblyInfo(Files, Version, FileVersion);
             task.Execute();
             return true;
         }
+
+        
 
         void WriteTeamCityParameters(VersionAndBranch versionAndBranch)
         {
